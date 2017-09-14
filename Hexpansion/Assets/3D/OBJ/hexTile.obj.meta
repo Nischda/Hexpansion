@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 085e4ccd1d0a46a469ba6dca72771122
-timeCreated: 1505215996
+guid: bfeb37b12a2b2904fa6522e33717354a
+timeCreated: 1505382493
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -12,7 +12,6 @@ ModelImporter:
     2300000: hexTile
     3300000: hexTile
     4300000: hexTile
-    6400000: hexTile
   materials:
     importMaterials: 1
     materialName: 0

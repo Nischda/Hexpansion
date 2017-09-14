@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4185641504909872}
   m_Layer: 0
   m_Name: hexTile
-  m_TagString: Untagged
+  m_TagString: Hex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,9 +37,10 @@ GameObject:
   - component: {fileID: 33326449867382166}
   - component: {fileID: 23188684058648830}
   - component: {fileID: 64140078102751038}
+  - component: {fileID: 114587132570045080}
   m_Layer: 0
   m_Name: hexTile
-  m_TagString: Untagged
+  m_TagString: Hex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +110,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1555109240681886}
-  m_Mesh: {fileID: 4300000, guid: 085e4ccd1d0a46a469ba6dca72771122, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bfeb37b12a2b2904fa6522e33717354a, type: 3}
 --- !u!64 &64140078102751038
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -123,4 +124,17 @@ MeshCollider:
   m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 085e4ccd1d0a46a469ba6dca72771122, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bfeb37b12a2b2904fa6522e33717354a, type: 3}
+--- !u!114 &114587132570045080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1555109240681886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea3994a7b5e2434c83f4527ec910f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  X: 0
+  Y: 0
