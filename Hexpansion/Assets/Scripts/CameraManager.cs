@@ -7,7 +7,7 @@ public class CameraManager : MonoBehaviour {
 		
 	public float TurnSpeed = 1.0f;
 	public float PanSpeed = 1.0f;
-	public float ZoomSpeed = 1.0f;
+	public float ZoomSpeed = 1.0f; 
 	
 	private Vector3 _mouseOrigin;	//Cursor location on drag init
 	private bool _isRotating;	
@@ -34,7 +34,6 @@ public class CameraManager : MonoBehaviour {
 			transform.RotateAround(transform.position, Vector3.up, pos.x * TurnSpeed);
 		}
 	}
-	
 	private void PanCamera() {
 		// right mouse button
 		if (Input.GetMouseButtonDown(1)){
@@ -44,17 +43,25 @@ public class CameraManager : MonoBehaviour {
 		if (!Input.GetMouseButton(1)) _isPanning = false;// Disable movements on button release
 		
 		// Move camera on XZ axis
-		if (_isPanning)
-		{
-			Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - _mouseOrigin);
-
-			Vector3 move = new Vector3(pos.x * -PanSpeed, pos.y * -PanSpeed, 0); //negative as drag is inversed
-			transform.Translate(move, Space.Self);
+		if (_isPanning){
+			Vector3 delta = Input.mousePosition - _mouseOrigin;
+			transform.Translate(-delta.x * PanSpeed, -delta.y * PanSpeed, 0);
+			_mouseOrigin = Input.mousePosition;
 		}
 	}
 	
 	private void ZoomCamera() {
-	
+		//Mouse wheel front scroll
+		if (Input.GetAxis("Mouse ScrollWheel") > 0){
+			GetComponent<Transform>().position = new Vector3(transform.position.x,transform.position.y-2*ZoomSpeed, transform.position.z+ZoomSpeed);
+			transform.Rotate(-2,0,0);
+		}
+		//Mouse wheel back scroll
+		if (Input.GetAxis("Mouse ScrollWheel") < 0){
+			GetComponent<Transform>().position = new Vector3(transform.position.x,transform.position.y+2*ZoomSpeed, transform.position.z-ZoomSpeed);
+			transform.Rotate(2,0,0);
+		}
+		/*
 		// scroll mouse button
 		if (Input.GetMouseButtonDown(2)){
 			_mouseOrigin = Input.mousePosition;
@@ -71,6 +78,7 @@ public class CameraManager : MonoBehaviour {
 			Vector3 move = pos.y * ZoomSpeed * transform.forward;
 			transform.Translate(move, Space.World);
 		}
+		*/
 	}
 
 	private void Update(){

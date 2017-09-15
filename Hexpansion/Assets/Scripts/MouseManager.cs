@@ -73,9 +73,10 @@ public class MouseManager : MonoBehaviour
 	}
 
 	private static void ColorNeighbours(GameObject ourHitObject, Color color){
-		var neighbours = ourHitObject.GetComponent<Hex>().GetNeighbours();
+		var neighbours = ourHitObject.GetComponent<Hex>().HexNeighborList;
 		
-		for (int i = 0; i < neighbours.Length; i++) {
+		for (int i = 0; i < neighbours.Count; i++) {
+			Debug.Log(i);
 			neighbours[i].GetComponentInChildren<MeshRenderer>().material.color =color;
 		}
 	}

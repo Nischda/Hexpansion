@@ -197,7 +197,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141437569}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -215,8 +215,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnSpeed: 1
-  PanSpeed: 1
-  ZoomSpeed: 1
+  PanSpeed: 0.0185
+  ZoomSpeed: 0.5
 --- !u!1 &288110640
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +647,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HexTilePrefab: {fileID: 1483198524562232, guid: f9bb7ea2475ce9348a16bb68ce42a3ba,
     type: 2}
+  Width: 14
+  Height: 14
+  IsCircle: 1
 --- !u!4 &1957850949
 Transform:
   m_ObjectHideFlags: 0
