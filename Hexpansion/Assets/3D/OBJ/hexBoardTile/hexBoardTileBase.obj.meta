@@ -1,22 +1,17 @@
 fileFormatVersion: 2
-guid: ee58f7602195f2e408355a2bac616744
-timeCreated: 1505380414
+guid: 949142bb50daf2f47bc6d71f81c67706
+timeCreated: 1505569078
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: tile_part
-    100002: //RootNode
-    100004: tilePart_tile_part7
-    400000: tile_part
-    400002: //RootNode
-    400004: tilePart_tile_part7
-    2300000: tile_part
-    2300002: tilePart_tile_part7
-    3300000: tile_part
-    3300002: tilePart_tile_part7
-    4300000: tile_part
-    4300002: tilePart_tile_part7
+    100000: //RootNode
+    100002: hexBoardTileBase_boardHexTile1
+    400000: //RootNode
+    400002: hexBoardTileBase_boardHexTile1
+    2300000: hexBoardTileBase_boardHexTile1
+    3300000: hexBoardTileBase_boardHexTile1
+    4300000: hexBoardTileBase_boardHexTile1
   materials:
     importMaterials: 1
     materialName: 0

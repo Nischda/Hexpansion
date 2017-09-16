@@ -9,7 +9,6 @@ public class MouseManager : MonoBehaviour
 {
 
 	public Unit SelectedUnit;
-
 	private void Start () {
 		
 	}
@@ -27,20 +26,23 @@ public class MouseManager : MonoBehaviour
 	}
 
 	//INPUT
-	private void InputManager(GameObject ourHitObject){
+	private void InputManager(GameObject ourHitObject) {
+
+		/*
 		if (Input.GetMouseButtonDown(0)) { //left mouse button clicked
-			if (ourHitObject.CompareTag("Hex")) {
+			if (ourHitObject.CompareTag("HexBoardTile")) {
 				ColorManager(ourHitObject);
 			}
 			else if (ourHitObject.GetComponent<Unit>() != null) {
 				MeshRenderer mr = ourHitObject.GetComponentInChildren<MeshRenderer>();
 				mr.material.color = Color.green;
-				Move(ourHitObject);
+				//Utility.Move(ourHitObject);
 			}
 		}
+		*/
 	}
 
-	private GameObject GetHitObjectFromRayCast() {
+	private static GameObject GetHitObjectFromRayCast() {
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hitInfo;
 		if (Physics.Raycast(ray, out hitInfo)) {
@@ -49,10 +51,36 @@ public class MouseManager : MonoBehaviour
 		return null;
 	}
 
-	//MOVE
-	private void Move(GameObject ourHitObject) {
-		SelectedUnit = ourHitObject.GetComponent<Unit>();
+	
+	
+	
+	private Vector3 _screenPoint;
+	private Vector3 _offset;
+ 
+	void OnMouseDown()
+	{
+		//SelectedUnit = ourHitObject.transform.position
+		
+		_screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+		_offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z));
+ 
 	}
+ 
+	void OnMouseDrag()
+	{
+		Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z);
+ 
+		Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint)+ _offset;
+		transform.position = curPosition;
+	}
+	
+	
+	
+	
+	
+	
+	
+	//MOVE
 	
 	//COLORMANAGER
 	private void ColorManager(GameObject ourHitObject) {
@@ -73,7 +101,7 @@ public class MouseManager : MonoBehaviour
 	}
 
 	private static void ColorNeighbours(GameObject ourHitObject, Color color){
-		var neighbours = ourHitObject.GetComponent<Hex>().HexNeighborList;
+		var neighbours = ourHitObject.GetComponent<HexBoardTile>().HexNeighborList;
 		
 		for (int i = 0; i < neighbours.Count; i++) {
 			Debug.Log(i);

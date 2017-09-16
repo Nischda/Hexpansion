@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hex
+  - HexBoardTile
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - HexPlayerTile
   - 
   - 
   - 

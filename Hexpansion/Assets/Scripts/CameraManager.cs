@@ -54,12 +54,12 @@ public class CameraManager : MonoBehaviour {
 		//Mouse wheel front scroll
 		if (Input.GetAxis("Mouse ScrollWheel") > 0){
 			GetComponent<Transform>().position = new Vector3(transform.position.x,transform.position.y-2*ZoomSpeed, transform.position.z+ZoomSpeed);
-			transform.Rotate(-2,0,0);
+			//transform.Rotate(-2,0,0);
 		}
 		//Mouse wheel back scroll
 		if (Input.GetAxis("Mouse ScrollWheel") < 0){
 			GetComponent<Transform>().position = new Vector3(transform.position.x,transform.position.y+2*ZoomSpeed, transform.position.z-ZoomSpeed);
-			transform.Rotate(2,0,0);
+			//transform.Rotate(2,0,0);
 		}
 		/*
 		// scroll mouse button

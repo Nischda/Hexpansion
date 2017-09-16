@@ -87,11 +87,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4455819737156108}
-  - component: {fileID: 114909268425462484}
-  - component: {fileID: 114159525120075868}
   - component: {fileID: 23911705023737068}
   - component: {fileID: 33238001816127958}
   - component: {fileID: 64899542362125164}
+  - component: {fileID: 114168552904345266}
   m_Layer: 0
   m_Name: hexPlayerTile
   m_TagString: Untagged
@@ -227,8 +226,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331858766619460}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.17, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.131, y: 0, z: 1.026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4945930142371010}
@@ -615,14 +614,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1562198252940500}
-  m_Mesh: {fileID: 4300000, guid: ee58f7602195f2e408355a2bac616744, type: 3}
+  m_Mesh: {fileID: 4300002, guid: ee58f7602195f2e408355a2bac616744, type: 3}
 --- !u!33 &33107844459615758
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403013617112434}
-  m_Mesh: {fileID: 4300000, guid: ee58f7602195f2e408355a2bac616744, type: 3}
+  m_Mesh: {fileID: 4300002, guid: ee58f7602195f2e408355a2bac616744, type: 3}
 --- !u!33 &33238001816127958
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -636,14 +635,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230440242119802}
-  m_Mesh: {fileID: 4300000, guid: ee58f7602195f2e408355a2bac616744, type: 3}
+  m_Mesh: {fileID: 4300002, guid: ee58f7602195f2e408355a2bac616744, type: 3}
 --- !u!33 &33367793339472020
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1483305170746456}
-  m_Mesh: {fileID: 4300000, guid: ee58f7602195f2e408355a2bac616744, type: 3}
+  m_Mesh: {fileID: 4300002, guid: ee58f7602195f2e408355a2bac616744, type: 3}
 --- !u!33 &33515630611034618
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -664,14 +663,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1097352563563400}
-  m_Mesh: {fileID: 4300000, guid: ee58f7602195f2e408355a2bac616744, type: 3}
+  m_Mesh: {fileID: 4300002, guid: ee58f7602195f2e408355a2bac616744, type: 3}
 --- !u!33 &33851751543645406
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1029056641710084}
-  m_Mesh: {fileID: 4300000, guid: ee58f7602195f2e408355a2bac616744, type: 3}
+  m_Mesh: {fileID: 4300002, guid: ee58f7602195f2e408355a2bac616744, type: 3}
 --- !u!64 &64899542362125164
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -686,7 +685,7 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: bfeb37b12a2b2904fa6522e33717354a, type: 3}
---- !u!114 &114159525120075868
+--- !u!114 &114168552904345266
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -694,18 +693,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1331858766619460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaeac4d37b7d4ad4a986178f208788fe, type: 3}
+  m_Script: {fileID: 11500000, guid: aa14cea986fcea1458d150290436f150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destination: {x: 0, y: 0, z: 0}
---- !u!114 &114909268425462484
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1331858766619460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9871c581cad4b2f40aeee86c47737367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  HighlightShader: {fileID: 4800000, guid: ad68893c61460d448a4141e81c5132ff, type: 3}

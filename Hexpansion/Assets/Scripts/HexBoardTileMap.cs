@@ -7,10 +7,10 @@ using System.Xml.Schema;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class HexMap : MonoBehaviour
+public class HexBoardTileMap : MonoBehaviour
 {
 
-	public GameObject HexTilePrefab;
+	public GameObject HexBoardTilePrefab;
 
 	//number of tiles per axis.
 	public int Width = 14;
@@ -77,17 +77,17 @@ public class HexMap : MonoBehaviour
 	}
 
 	private void CreateTile(float x, float z, int coodX, int coodZ){
-		GameObject hexTileGameObject = Instantiate(HexTilePrefab, new Vector3(x, 0, z), Quaternion.identity);
-		hexTileGameObject.name = "Hex_" + coodX + "_" + coodZ;
+		GameObject hexTileGameObject = Instantiate(HexBoardTilePrefab, new Vector3(x, 0, z), Quaternion.identity);
+		hexTileGameObject.name = "HexBoardTile_" + coodX + "_" + coodZ;
 		hexTileGameObject.transform.SetParent(this.transform);
-		hexTileGameObject.GetComponentInChildren<Hex>().X = coodX;
-		hexTileGameObject.GetComponentInChildren<Hex>().Y = coodZ;
-		hexTileGameObject.GetComponentInChildren<Hex>().MaxWidth = Width;
-		hexTileGameObject.GetComponentInChildren<Hex>().MaxHeight = Height;
+		hexTileGameObject.GetComponentInChildren<HexBoardTile>().X = coodX;
+		hexTileGameObject.GetComponentInChildren<HexBoardTile>().Y = coodZ;
 		hexTileGameObject.isStatic = true;
+
 		//optional
-		hexTileGameObject. transform.localScale += new Vector3(0, Random.value*10, 0);
+		//hexTileGameObject. transform.localScale += new Vector3(0, Random.value*10, 0);
 	}
+
 
 	private static List<List<List<int>>> FilterTileList(List<List<List<int>>> tileList)
 	{
