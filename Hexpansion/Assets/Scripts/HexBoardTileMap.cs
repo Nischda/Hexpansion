@@ -136,8 +136,8 @@ public class HexBoardTileMap : MonoBehaviour
 
 	private void MoveCameraToCenter() {
 		float x = Width * XOffset / 2;
-		float y = 10;
-		float z = Height * ZOffset / 2;
+		float y = 8;
+		float z = Height * ZOffset / 2 ;
 		Camera.main.transform.position = new Vector3(x, y, z);
 	}
 }

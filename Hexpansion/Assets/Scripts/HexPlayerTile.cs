@@ -48,6 +48,9 @@ public class HexPlayerTile : MonoBehaviour
 
 	private void OnMouseOver(){
 		_rend.material.shader = HighlightShader;
+		if (Input.GetKeyDown("r")){
+			transform.Rotate(0 ,60 ,0); //rotate y-axis for another color layout
+		}
 	}
 
 	private void OnMouseExit(){
