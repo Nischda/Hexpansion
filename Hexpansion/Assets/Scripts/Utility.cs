@@ -40,7 +40,6 @@ public static  class Utility
 	}
 
 	public static void Move(GameObject toDrop, GameObject target){
-		Debug.Log("Moved");
 		toDrop.transform.position = target.transform.position;
 	}
 	

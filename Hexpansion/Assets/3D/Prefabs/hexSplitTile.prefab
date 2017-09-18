@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 33047585272962324}
   - component: {fileID: 23526731207500998}
   m_Layer: 0
-  m_Name: tile_part6
+  m_Name: tile_part0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 23626871388890798}
   m_Layer: 0
   m_Name: hexSplitTile
-  m_TagString: Untagged
+  m_TagString: HexPlayerTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4298220142618234}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4271133172231968
 Transform:
@@ -203,12 +203,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4781326948394618}
   - {fileID: 4092777378713368}
   - {fileID: 4538246107191684}
   - {fileID: 4635005002358510}
   - {fileID: 4817299620651888}
   - {fileID: 4952523037129744}
-  - {fileID: 4781326948394618}
   m_Father: {fileID: 4271133172231968}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -236,7 +236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4298220142618234}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4635005002358510
 Transform:
@@ -249,7 +249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4298220142618234}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
 --- !u!4 &4781326948394618
 Transform:
@@ -262,7 +262,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4298220142618234}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 300, z: 0}
 --- !u!4 &4817299620651888
 Transform:
@@ -275,7 +275,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4298220142618234}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4952523037129744
 Transform:
@@ -288,7 +288,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4298220142618234}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 240, z: 0}
 --- !u!23 &23007442008602398
 MeshRenderer:
@@ -642,3 +642,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HighlightShader: {fileID: 4800000, guid: ad68893c61460d448a4141e81c5132ff, type: 3}
+  ScaleOnHover: {x: 1.2, y: 1.2, z: 1.2}
+  ColorIdList: 

@@ -8,7 +8,6 @@ using UnityEngine.EventSystems;
 public class MouseManager : MonoBehaviour
 {
 
-	public Unit SelectedUnit;
 	private void Start () {
 		
 	}
@@ -19,10 +18,7 @@ public class MouseManager : MonoBehaviour
 			return;
 		}
 		
-		GameObject ourHitObject = GetHitObjectFromRayCast();
-		if (ourHitObject != null) {
-			InputManager(ourHitObject);
-		}
+		//_ourHitObject = Utility.GetHitObjectFromRayCast();
 	}
 
 	//INPUT
@@ -42,47 +38,14 @@ public class MouseManager : MonoBehaviour
 		*/
 	}
 
-	private static GameObject GetHitObjectFromRayCast() {
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hitInfo;
-		if (Physics.Raycast(ray, out hitInfo)) {
-			return hitInfo.collider.transform.gameObject;
-		}
-		return null;
-	}
 
-	
-	
-	
-	private Vector3 _screenPoint;
-	private Vector3 _offset;
- 
-	void OnMouseDown()
-	{
-		//SelectedUnit = ourHitObject.transform.position
-		
-		_screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-		_offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z));
- 
-	}
- 
-	void OnMouseDrag()
-	{
-		Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z);
- 
-		Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint)+ _offset;
-		transform.position = curPosition;
-	}
-	
-	
-	
-	
-	
-	
-	
+
+
+
 	//MOVE
 	
 	//COLORMANAGER
+	/*
 	private void ColorManager(GameObject ourHitObject) {
 		MeshRenderer mr = ourHitObject.GetComponentInChildren<MeshRenderer>();
 		if (mr.material.color == Color.red){
@@ -108,4 +71,5 @@ public class MouseManager : MonoBehaviour
 			neighbours[i].GetComponentInChildren<MeshRenderer>().material.color =color;
 		}
 	}
+	*/
 }

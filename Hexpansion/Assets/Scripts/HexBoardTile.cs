@@ -25,7 +25,7 @@ public class HexBoardTile : MonoBehaviour
 
 	private  void SetNeighbours() {
 		if (Y % 2 == 1){
-			AddNeighbour(X+1, Y+1);
+			AddNeighbour(X, Y+1);
 			AddNeighbour(X+1, Y);
 			AddNeighbour(X+1, Y-1);
 			AddNeighbour(X, Y-1);
@@ -35,8 +35,8 @@ public class HexBoardTile : MonoBehaviour
 		else{
 			AddNeighbour(X, Y+1);
 			AddNeighbour(X+1, Y);
+			AddNeighbour(X+1, Y-1);
 			AddNeighbour(X, Y-1);
-			AddNeighbour(X-1, Y-1);
 			AddNeighbour(X-1, Y);
 			AddNeighbour(X-1, Y+1);
 		}
@@ -44,8 +44,13 @@ public class HexBoardTile : MonoBehaviour
 
 	private void AddNeighbour(int x, int y){
 		var neighbour = GameObject.Find("HexBoardTile_" + x + "_" + y);
-		if (neighbour != null){
+		if (neighbour != null)
+		{
 			HexNeighborList.Add(neighbour);
+		}
+		else
+		{
+			HexNeighborList.Add(null);
 		}
 	}
 	

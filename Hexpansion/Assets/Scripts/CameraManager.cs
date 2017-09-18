@@ -34,6 +34,7 @@ public class CameraManager : MonoBehaviour {
 			transform.RotateAround(transform.position, Vector3.up, pos.x * TurnSpeed);
 		}
 	}
+	
 	private void PanCamera() {
 		// right mouse button
 		if (Input.GetMouseButtonDown(1)){

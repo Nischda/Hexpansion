@@ -15,8 +15,13 @@ public class HexPlayerTileMap : MonoBehaviour {
 	private const float XOffset = 1f;
 	private const float ZOffset = 0.86f;
 
+	private int _centerX;
+	private int _centerZ = 3;
 
-	private void Start (){
+
+	private void Start ()
+	{
+		_centerX = Width / 2;
 		CreateHexBoardTileLine();
 	}
 
@@ -36,11 +41,12 @@ public class HexPlayerTileMap : MonoBehaviour {
 
 	
 	private void CreateTile(float x, float z, int coodX, int coodZ){
-		GameObject hexTileGameObject = Instantiate(HexPlayerTilePrefab, new Vector3(x+transform.position.x, 0, z+transform.position.z), Quaternion.identity); //subtract x,z-Axis to place under object root
+		GameObject hexTileGameObject = Instantiate(HexPlayerTilePrefab, new Vector3(x - _centerX, 0, z - _centerZ), Quaternion.identity); //subtract half of width to place under root/ in center of parent
 		hexTileGameObject.name = "HexPlayerTile_" + coodX + "_" + coodZ;
 		hexTileGameObject.transform.SetParent(this.transform);
 		hexTileGameObject.isStatic = true;
 		ColorizeParts(hexTileGameObject);
+		
 		//optional
 		//hexTileGameObject. transform.localScale += new Vector3(0, Random.value*10, 0);
 	}
@@ -48,12 +54,15 @@ public class HexPlayerTileMap : MonoBehaviour {
 	private void ColorizeParts(GameObject hexTileGameObject)
 	{
 		var tilePartsGameObject = hexTileGameObject.transform.Find("tile_parts");
+		List<int> colorIdList = new List<int>();
+		
 		//Debug.Log(tilePartsGameObject.name);
 		foreach (Transform tilePart in tilePartsGameObject.transform){
-			int randColorId = Random.Range(0, ColorCount);
-			Debug.Log(tilePart.name + " " + randColorId);
+			int randColorId =  Random.Range(0, ColorCount); //Get a random Color from predefined List
+			colorIdList.Add(randColorId); //save added colors by id to avoid additional iterations
 			tilePart.GetComponent<MeshRenderer>().material.color = Utility.ColorList[randColorId];
 		}
+		hexTileGameObject.GetComponent<HexPlayerTile>().ColorIdList = colorIdList;
 	}
 }
 

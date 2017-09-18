@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hex
   - HexBoardTile
+  - HexPlayerTile
   layers:
   - Default
   - TransparentFX

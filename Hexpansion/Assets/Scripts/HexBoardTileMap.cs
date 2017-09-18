@@ -20,9 +20,16 @@ public class HexBoardTileMap : MonoBehaviour
 	private const float XOffset = 1f;
 	private const float ZOffset = 0.86f;
 
+	private int _centerX;
+	private int _centerY;
+
 	private void Start ()
 	{
-		MoveCameraToCenter();
+		//center hexBoardTileMap to world root 
+		_centerX = Width / 2;
+		_centerY =  Convert.ToInt32(Height * ZOffset / 2 -1);
+		
+		//MoveCameraToCenter();
 
 		if (IsCircle){
 			CreateHexMapCircle();
@@ -77,7 +84,7 @@ public class HexBoardTileMap : MonoBehaviour
 	}
 
 	private void CreateTile(float x, float z, int coodX, int coodZ){
-		GameObject hexTileGameObject = Instantiate(HexBoardTilePrefab, new Vector3(x, 0, z), Quaternion.identity);
+		GameObject hexTileGameObject = Instantiate(HexBoardTilePrefab, new Vector3(x - _centerX, 0, z - _centerY), Quaternion.identity);
 		hexTileGameObject.name = "HexBoardTile_" + coodX + "_" + coodZ;
 		hexTileGameObject.transform.SetParent(this.transform);
 		hexTileGameObject.GetComponentInChildren<HexBoardTile>().X = coodX;
@@ -124,7 +131,7 @@ public class HexBoardTileMap : MonoBehaviour
 			for (int y = startY; y < halfHeight; y++){
 				List<int> tileCoods = new List<int>();
 				tileCoods.Add(x);
-				tileCoods.Add(y);
+				tileCoods.Add(y); 
 				columnList.Add(tileCoods);
 			}
 			tileList.Add(columnList);

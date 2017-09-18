@@ -5,6 +5,9 @@ using System.Runtime.CompilerServices;
 using NUnit.Framework.Constraints;
 using UnityEngine.Networking;
 
+//Todo: preview valid tiles to place
+//Todo: move player tile selection to bottom ui bar
+//Todo: pop up matching parts
 [RequireComponent(typeof(MeshCollider))]
  
 public class HexPlayerTile : MonoBehaviour 
@@ -16,7 +19,9 @@ public class HexPlayerTile : MonoBehaviour
 	
 	private Renderer _rend;
 	private Shader _baseShader;
+	
 	public Shader HighlightShader;
+	public List<int> ColorIdList;
 
 	private LayerMask _baseLayer;
 
@@ -32,10 +37,11 @@ public class HexPlayerTile : MonoBehaviour
 
 	//MOVE
 	private void OnMouseDown(){
+		//Debug.Log("clicked on: " + transform.name);
 		_mouseDown = true;
+		transform.Translate(0,0.25f,0);
 		_rend.material.shader = HighlightShader;
-		transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-		Debug.Log("clicked on: " + transform.name);
+		gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
 		_screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 		_offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z));
 	}
@@ -64,8 +70,10 @@ public class HexPlayerTile : MonoBehaviour
 		GameObject ourHitObject = Utility.GetHitObjectFromRayCast();
 		if (ourHitObject != null && ourHitObject.CompareTag("HexBoardTile")){
 			Utility.Move(gameObject, ourHitObject);
-			DisableInteraction();
+			
+			gameObject.transform.SetParent(ourHitObject.transform.parent);
 			CalculatePoints(ourHitObject.GetComponent<HexBoardTile>().HexNeighborList);
+			DisableInteraction();
 		}
 		else{
 			ResetPosition(); //failed to snap onto object so reposition to origin
@@ -77,7 +85,7 @@ public class HexPlayerTile : MonoBehaviour
 	private void DisableInteraction(){
 		GetComponent<MeshCollider>().enabled = false;
 		transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-		Destroy(this);
+		//Destroy(this);
 	}
 	
 	private void ResetPosition(){
@@ -85,8 +93,20 @@ public class HexPlayerTile : MonoBehaviour
 	}
 	
 	//SCORE
-	private void CalculatePoints(List<GameObject> hexNeighborList){
-		
+	private void CalculatePoints(List<GameObject> hexNeighborList)
+	{
+		int index = 0;
+		foreach (var neighbor in hexNeighborList){
+			if (neighbor != null){ // null is used store empty neighbour tiles (for valid indexing)
+				var playerTile = neighbor.GetComponentInChildren<HexPlayerTile>();
+				
+				if (playerTile != null){ //If a playerTile has already been placed on nearby boardtile
+					if (ColorIdList[index] == playerTile.ColorIdList[(index+3)%6]){
+						Debug.Log("match");
+					}
+				}
+			}
+			index++;
+		}
 	}
-}
-		               
+}       
