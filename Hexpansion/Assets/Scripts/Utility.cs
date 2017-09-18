@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 
-public static  class Utility
-{
-
+public static  class Utility {
+	public static Color GreenColor = new Color32(0, 243, 0, 255);
 	public static Color RedColor = new Color32(238, 58, 57, 255);
+	public static Color BlueColor = new Color32(0,165,255, 255);
 	public static Color OrangeColor = new Color32(255, 128, 28, 255);
 	public static Color YellowColor = new Color32(255, 239, 0, 255);
-	public static Color GreenColor = new Color32(0, 243, 0, 255);
-	public static Color BlueColor = new Color32(0,165,255, 255);
 	public static Color PurpleColor = new Color32(141,80,202, 255);
 	
 	/*
@@ -21,11 +19,11 @@ public static  class Utility
 	public static Color BlueColor = new Color32(138,140,255, 255);
 */
 	public static List<Color> ColorList = new List<Color>(){
+		GreenColor,
 		RedColor,
+		BlueColor,
 		OrangeColor,
 		YellowColor,
-		GreenColor,
-		BlueColor,
 		PurpleColor
 	};
 	

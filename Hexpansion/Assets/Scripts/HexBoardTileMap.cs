@@ -20,16 +20,16 @@ public class HexBoardTileMap : MonoBehaviour
 	private const float XOffset = 1f;
 	private const float ZOffset = 0.86f;
 
-	private int _centerX;
+	private float _centerX;
 	private int _centerY;
 
 	private void Start ()
 	{
 		//center hexBoardTileMap to world root 
-		_centerX = Width / 2;
-		_centerY =  Convert.ToInt32(Height * ZOffset / 2 -1);
+		_centerX = Width/ 2 + Width/2*0.5f -1;
+		_centerY =  Convert.ToInt32(Height * ZOffset / 2);
 		
-		//MoveCameraToCenter();
+		AdjustCameraZoom();
 
 		if (IsCircle){
 			CreateHexMapCircle();
@@ -141,10 +141,8 @@ public class HexBoardTileMap : MonoBehaviour
 	}
 
 
-	private void MoveCameraToCenter() {
-		float x = Width * XOffset / 2;
-		float y = 8;
-		float z = Height * ZOffset / 2 ;
-		Camera.main.transform.position = new Vector3(x, y, z);
+	private void AdjustCameraZoom() {
+		Camera.main.transform.position += new Vector3(0, Width, 0);
+		Camera.main.GetComponent<CameraManager>().MaxZoomOut += Width;
 	}
 }
