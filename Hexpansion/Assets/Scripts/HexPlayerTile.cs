@@ -11,6 +11,7 @@ using UnityEngine.Networking;
 //Todo: preview valid tiles to place
 //Todo: split player tiles into current and upcoming
 //Todo: pop up matching parts and display texts in matching color and +1
+//Todo: move mouseover etc into mousemanager
 [RequireComponent(typeof(MeshCollider))]
  
 public class HexPlayerTile : MonoBehaviour 
@@ -25,6 +26,9 @@ public class HexPlayerTile : MonoBehaviour
 	private LayerMask _baseLayer;
 	public Shader HighlightShader;
 	public List<int> ColorIdList;
+	
+	public int XCood;
+	public int ZCood;
 	
 	private bool _mouseDown = false;
 	
@@ -74,6 +78,7 @@ public class HexPlayerTile : MonoBehaviour
 		_mouseDown = false;
 		GameObject ourHitObject = Utility.GetHitObjectFromRayCast();
 		if (ourHitObject != null && ourHitObject.CompareTag("HexBoardTile")){
+			transform.parent.GetComponent<HexPlayerTileMap>().AddTile(XCood, ZCood);
 			PlaceOnBoardTile(ourHitObject);
 			CalculatePoints(ourHitObject.GetComponent<HexBoardTile>().HexNeighborList);
 			DisableInteraction();

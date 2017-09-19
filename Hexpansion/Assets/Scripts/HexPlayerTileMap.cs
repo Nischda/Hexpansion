@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Assertions.Must;
 
 public class HexPlayerTileMap : MonoBehaviour {
-
+	//Note: camera gets placed by HexBoardTileMap relative to board size
 	public GameObject HexPlayerTilePrefab;
 
 	public int ColorCount = 3;
@@ -15,15 +15,22 @@ public class HexPlayerTileMap : MonoBehaviour {
 	private const float XOffset = 1f/2;
 	private const float ZOffset = 0.86f/2;
 
-	private int _centerX;
+	private float _centerX;
 
 
-	private void Start () {
-		_centerX = Width / 2;
+	private void Start ()
+	{
+		_centerX = 0.24f * (Width-1);
+		
 		CreateHexBoardTileLine();
-		transform.position = new Vector3(0, 12,-1.65f); //set final position
 	}
 
+	// -1.3
+	//-1.05
+	//-0.75
+	//-0.55
+	//-0.31
+	
 	private void CreateHexBoardTileLine(){
 		for (int x = 0; x < Width; x++) {
 			for (int z = 0; z < Height; z++) {
@@ -39,11 +46,15 @@ public class HexPlayerTileMap : MonoBehaviour {
 	}
 
 	
-	private void CreateTile(float x, float z, int coodX, int coodZ){
-		GameObject hexTileGameObject = Instantiate(HexPlayerTilePrefab, new Vector3(x - _centerX, 0, z), Quaternion.identity); //subtract half of width to place under root/ in center of parent
-		hexTileGameObject.name = "HexPlayerTile_" + coodX + "_" + coodZ;
+	private void CreateTile(float x, float z, int xCood, int zCood){
+		GameObject hexTileGameObject = Instantiate(HexPlayerTilePrefab, new Vector3(0,0,0), Quaternion.identity); //subtract half of width to place under root/ in center of parent
 		hexTileGameObject.transform.SetParent(this.transform);
+		hexTileGameObject.transform.localPosition = new Vector3((x-0.05f)- _centerX , -4, z - 1.65f); // set coods after parenting to avoid relative misplacement
+		hexTileGameObject.name = "HexPlayerTile_" + xCood + "_" + zCood;
 		hexTileGameObject.isStatic = true;
+		var hexTile = hexTileGameObject.GetComponent<HexPlayerTile>();
+		hexTile.XCood = xCood;
+		hexTile.ZCood = zCood;
 		ColorizeParts(hexTileGameObject);
 		
 		//optional
@@ -61,6 +72,15 @@ public class HexPlayerTileMap : MonoBehaviour {
 			tilePart.GetComponent<MeshRenderer>().material.color = Utility.ColorList[randColorId];
 		}
 		hexTileGameObject.GetComponent<HexPlayerTile>().ColorIdList = colorIdList;
+	}
+
+	public void AddTile(int x, int z) {
+		float xPos = x * XOffset;
+		float zPos = z * ZOffset;
+		if (z % 2 == 1) {
+			xPos += XOffset / 2f;
+		}
+		CreateTile(xPos, zPos, x, z);
 	}
 }
 

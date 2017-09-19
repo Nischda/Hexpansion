@@ -142,7 +142,7 @@ public class HexBoardTileMap : MonoBehaviour
 
 
 	private void AdjustCameraZoom() {
-		Camera.main.transform.position += new Vector3(0, Width, 0);
+		Camera.main.transform.position += new Vector3(0, Width -5, -1.5f);
 		Camera.main.GetComponent<CameraManager>().MaxZoomOut += Width;
 	}
 }
