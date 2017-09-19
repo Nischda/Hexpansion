@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4424949888851416}
   - component: {fileID: 33851751543645406}
   - component: {fileID: 23658199863335880}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: tile_part3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4927099167814224}
   - component: {fileID: 33847244008836332}
   - component: {fileID: 23455126983549822}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: tile_part5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4945930142371010}
   - component: {fileID: 33647333818280960}
   - component: {fileID: 23748870882646408}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: tile_color_tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4179692629100546}
   - component: {fileID: 33242500727913126}
   - component: {fileID: 23917749992184914}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: tile_part4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 33238001816127958}
   - component: {fileID: 64899542362125164}
   - component: {fileID: 114168552904345266}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: hexPlayerTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 4486910883359976}
   - component: {fileID: 33107844459615758}
   - component: {fileID: 23939034749958062}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: tile_part1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 4478834669214282}
   - component: {fileID: 33367793339472020}
   - component: {fileID: 23186778480218274}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: tile_part2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4980309961697502}
   - component: {fileID: 33104034005318712}
   - component: {fileID: 23116655036655300}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: tile_part6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4529620333147970}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: tile_parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 4286721011272456}
   - component: {fileID: 33515630611034618}
   - component: {fileID: 23660735879513300}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: tile_bg_tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,3 +697,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HighlightShader: {fileID: 4800000, guid: ad68893c61460d448a4141e81c5132ff, type: 3}
+  ColorIdList: 

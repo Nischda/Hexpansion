@@ -12,36 +12,35 @@ public class HexPlayerTileMap : MonoBehaviour {
 	public int Width = 6;
 	public int Height = 2;
 
-	private const float XOffset = 1f;
-	private const float ZOffset = 0.86f;
+	private const float XOffset = 1f/2;
+	private const float ZOffset = 0.86f/2;
 
 	private int _centerX;
-	private int _centerZ = 3;
 
 
-	private void Start ()
-	{
+	private void Start () {
 		_centerX = Width / 2;
 		CreateHexBoardTileLine();
+		transform.position = new Vector3(0, 12,-1.65f); //set final position
 	}
 
 	private void CreateHexBoardTileLine(){
 		for (int x = 0; x < Width; x++) {
-			for (int y = 0; y < Height; y++) {
+			for (int z = 0; z < Height; z++) {
 			
 				float xPos = x * XOffset;
-				float zPos = y * ZOffset;
-				if (y % 2 == 1) {
+				float zPos = z * ZOffset;
+				if (z % 2 == 1) {
 					xPos += XOffset / 2f;
 				}
-				CreateTile(xPos, zPos, x, y);
+				CreateTile(xPos, zPos, x, z);
 			}
 		}
 	}
 
 	
 	private void CreateTile(float x, float z, int coodX, int coodZ){
-		GameObject hexTileGameObject = Instantiate(HexPlayerTilePrefab, new Vector3(x - _centerX, 0, z - _centerZ), Quaternion.identity); //subtract half of width to place under root/ in center of parent
+		GameObject hexTileGameObject = Instantiate(HexPlayerTilePrefab, new Vector3(x - _centerX, 0, z), Quaternion.identity); //subtract half of width to place under root/ in center of parent
 		hexTileGameObject.name = "HexPlayerTile_" + coodX + "_" + coodZ;
 		hexTileGameObject.transform.SetParent(this.transform);
 		hexTileGameObject.isStatic = true;
@@ -56,9 +55,8 @@ public class HexPlayerTileMap : MonoBehaviour {
 		var tilePartsGameObject = hexTileGameObject.transform.Find("tile_parts");
 		List<int> colorIdList = new List<int>();
 		
-		//Debug.Log(tilePartsGameObject.name);
 		foreach (Transform tilePart in tilePartsGameObject.transform){
-			int randColorId =  Random.Range(0, ColorCount); //Get a random Color from predefined List
+			int randColorId =  Random.Range(0, ColorCount - 1); //Get a random Color from predefined List
 			colorIdList.Add(randColorId); //save added colors by id to avoid additional iterations
 			tilePart.GetComponent<MeshRenderer>().material.color = Utility.ColorList[randColorId];
 		}

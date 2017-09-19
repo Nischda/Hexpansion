@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Security.Permissions;
 using NUnit.Framework.Constraints;
+using UnityEditor;
+using UnityEditorInternal.VR;
 using UnityEngine.Networking;
 
 //Todo: preview valid tiles to place
-//Todo: move player tile selection to bottom ui bar
-//Todo: pop up matching parts
+//Todo: split player tiles into current and upcoming
+//Todo: pop up matching parts and display texts in matching color and +1
 [RequireComponent(typeof(MeshCollider))]
  
 public class HexPlayerTile : MonoBehaviour 
@@ -19,12 +22,10 @@ public class HexPlayerTile : MonoBehaviour
 	
 	private Renderer _rend;
 	private Shader _baseShader;
-	
+	private LayerMask _baseLayer;
 	public Shader HighlightShader;
 	public List<int> ColorIdList;
-
-	private LayerMask _baseLayer;
-
+	
 	private bool _mouseDown = false;
 	
 	//INIT
@@ -39,18 +40,22 @@ public class HexPlayerTile : MonoBehaviour
 	private void OnMouseDown(){
 		//Debug.Log("clicked on: " + transform.name);
 		_mouseDown = true;
-		transform.Translate(0,0.25f,0);
+		transform.Translate(0,0.5f,0); //move up slightly to be above other tiles.
 		_rend.material.shader = HighlightShader;
-		gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+		gameObject.layer = LayerMask.NameToLayer("Ignore Raycast"); //ignore Raycasts of selected object to be able to place it
 		_screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 		_offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z));
 	}
  
 	private void OnMouseDrag(){
-		Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z);
-		Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint)+ _offset;
-			                      transform.position = curPosition;
-	 }
+		GameObject ourHitObject = Utility.GetHitObjectFromRayCast();
+		if (ourHitObject != null && ourHitObject.CompareTag("HexBoardTile")){
+			SnapToBoardTile(ourHitObject);
+		}
+		else{
+			Drag();
+		}
+	}
 
 	private void OnMouseOver(){
 		_rend.material.shader = HighlightShader;
@@ -69,27 +74,47 @@ public class HexPlayerTile : MonoBehaviour
 		_mouseDown = false;
 		GameObject ourHitObject = Utility.GetHitObjectFromRayCast();
 		if (ourHitObject != null && ourHitObject.CompareTag("HexBoardTile")){
-			Utility.Move(gameObject, ourHitObject);
-			
-			gameObject.transform.SetParent(ourHitObject.transform.parent);
+			PlaceOnBoardTile(ourHitObject);
 			CalculatePoints(ourHitObject.GetComponent<HexBoardTile>().HexNeighborList);
 			DisableInteraction();
 		}
 		else{
 			ResetPosition(); //failed to snap onto object so reposition to origin
-			transform.gameObject.layer = _baseLayer;
 		}
 		_rend.material.shader = _baseShader;
 	}
 
+	private void SnapToBoardTile(GameObject ourHitObject){
+		Utility.Move(gameObject, ourHitObject);
+		transform.localScale = new Vector3(1, 1, 1);
+	}
+
+	private void PlaceOnBoardTile(GameObject ourHitObject){
+		Utility.Move(gameObject, ourHitObject);
+		gameObject.transform.SetParent(ourHitObject.transform.parent);
+		gameObject.transform.localScale = new Vector3(1,1,1);
+	}
+
+	private void Drag(){
+		Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z);
+		Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + _offset;
+		transform.position = curPosition;
+		transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+	}
+
 	private void DisableInteraction(){
 		GetComponent<MeshCollider>().enabled = false;
-		transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+		var children = GetComponentsInChildren<Transform>();
+		foreach (Transform go in children) {
+			go.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+		}
+		//transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
 		//Destroy(this);
 	}
 	
 	private void ResetPosition(){
 		transform.position = _startPosition;
+		transform.gameObject.layer = _baseLayer;
 	}
 	
 	//SCORE
@@ -101,7 +126,8 @@ public class HexPlayerTile : MonoBehaviour
 				var playerTile = neighbor.GetComponentInChildren<HexPlayerTile>();
 				
 				if (playerTile != null){ //If a playerTile has already been placed on nearby boardtile
-					if (ColorIdList[index] == playerTile.ColorIdList[(index+3)%6]){
+					int oppositeHexId = (index + 3) % 6;
+					if (ColorIdList[index] == playerTile.ColorIdList[oppositeHexId]){
 						Debug.Log("match");
 					}
 				}

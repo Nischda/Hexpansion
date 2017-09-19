@@ -17,8 +17,8 @@ public class HexBoardTileMap : MonoBehaviour
 	public  int Height = 14;
 	public bool IsCircle = true;
 
-	private const float XOffset = 1f;
-	private const float ZOffset = 0.86f;
+	private const float XOffset = 0.95263f;
+	private const float ZOffset = 0.825f;
 
 	private float _centerX;
 	private int _centerY;
@@ -48,8 +48,8 @@ public class HexBoardTileMap : MonoBehaviour
 		for (int x = 0; x < Width; x++) {
 			for (int y = 0; y < Height; y++) {
 				
-				float xPos = x * XOffset;
-				float zPos = y * ZOffset;
+				float xPos = XOffset * x;
+				float zPos = ZOffset * y;
 				if (y % 2 == 1) {
 					xPos += XOffset / 2f;
 				}
@@ -66,15 +66,15 @@ public class HexBoardTileMap : MonoBehaviour
 
 	private void CreateHexTilesFromList(List<List<List<int>>> tileList){
 		for (int x = 0; x < tileList.Count; x++){
-			var moveToCenter = 0;
+			float moveToCenter = 0;
 			for (int y = 0; y < tileList[x].Count; y++){
 					
-					float xPos = x * XOffset + moveToCenter;
-					float zPos = y * ZOffset;
+					float xPos = XOffset * x + moveToCenter;
+					float zPos = ZOffset * y;
 					
 					if (y % 2 == 1){
 						xPos += XOffset / 2f;
-						moveToCenter++;
+						moveToCenter += XOffset;
 					}
 				if (tileList[x][y] != null){
 					CreateTile(xPos, zPos, x, y);

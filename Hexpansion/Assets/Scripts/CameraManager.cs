@@ -98,6 +98,7 @@ public class CameraManager : MonoBehaviour {
 		if (Input.GetAxis("Mouse ScrollWheel") > 0){
 			if (GetComponent<Transform>().position.y > MaxZoomIn){
 				GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y - 2 * ZoomSpeed, transform.position.z); // z - ZoomSpeed
+				// 2D : Camera.main.orthographicSize -= .1f;}
 			}
 			//transform.Rotate(-2,0,0);
 		}
