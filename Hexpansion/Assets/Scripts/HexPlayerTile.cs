@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -7,6 +8,7 @@ using NUnit.Framework.Constraints;
 using UnityEditor;
 using UnityEditorInternal.VR;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 //Todo: preview valid tiles to place
 //Todo: split player tiles into current and upcoming
@@ -52,6 +54,9 @@ public class HexPlayerTile : MonoBehaviour
 	}
  
 	private void OnMouseDrag(){
+		if (Input.GetKeyDown("r")) {
+			Rotate();
+		}
 		GameObject ourHitObject = Utility.GetHitObjectFromRayCast();
 		if (ourHitObject != null && ourHitObject.CompareTag("HexBoardTile")){
 			SnapToBoardTile(ourHitObject);
@@ -63,9 +68,13 @@ public class HexPlayerTile : MonoBehaviour
 
 	private void OnMouseOver(){
 		_rend.material.shader = HighlightShader;
-		if (Input.GetKeyDown("r")){
-			transform.Rotate(0 ,60 ,0); //rotate y-axis for another color layout
+		if (Input.GetKeyDown("r")) {
+			Rotate();
 		}
+	}
+
+	private void Rotate(){
+		transform.Rotate(0 ,60 ,0); //rotate y-axis for another color layout
 	}
 
 	private void OnMouseExit(){
@@ -125,19 +134,42 @@ public class HexPlayerTile : MonoBehaviour
 	//SCORE
 	private void CalculatePoints(List<GameObject> hexNeighborList)
 	{
-		int index = 0;
+		int index = 12;
 		foreach (var neighbor in hexNeighborList){
 			if (neighbor != null){ // null is used store empty neighbour tiles (for valid indexing)
 				var playerTile = neighbor.GetComponentInChildren<HexPlayerTile>();
 				
 				if (playerTile != null){ //If a playerTile has already been placed on nearby boardtile
-					int oppositeHexId = (index + 3) % 6;
-					if (ColorIdList[index] == playerTile.ColorIdList[oppositeHexId]){
-						Debug.Log("match");
+					int rotateIndex = (index - GetRotationSkip())%6;
+					if (ColorIdList[rotateIndex] == playerTile.GetOppositeHexColorId(index)){
+						GameManager.AddToScore(1);
 					}
 				}
 			}
 			index++;
 		}
+	}
+
+	/// <summary>
+	/// Returns the colorId of the tile which is on the opposite end of the index given.
+	/// +3 is added to get the opposite tile, as a hexagons consits of 6 parts
+	/// For Each RotationStep (60Degrees) 1 index is subtracted to compare to get relative positions.
+	/// </summary>
+	/// <param name="index"></param>
+	/// <returns>int</returns>
+	public int GetOppositeHexColorId(int index){
+		int oppositeHexIndex = index + 3;
+		int rotateIndex = (oppositeHexIndex - GetRotationSkip()) % 6;
+		return ColorIdList[rotateIndex];
+	}
+
+	/// <summary>
+	/// Gets the current rotation and divides it by 60 to get the amount of rotations present
+	/// EulerAngles can be negative, so 360 degrees is added to make it positive.
+	/// EulerAngles are floats, so it is being cast to int (Should be exact numbers if unity does not fail too bad)
+	/// </summary>
+	/// <returns>int</returns>
+	private int GetRotationSkip(){
+		return (int) ((transform.rotation.eulerAngles.y+360)/ 60);
 	}
 }       

@@ -24,12 +24,6 @@ public class HexPlayerTileMap : MonoBehaviour {
 		
 		CreateHexBoardTileLine();
 	}
-
-	// -1.3
-	//-1.05
-	//-0.75
-	//-0.55
-	//-0.31
 	
 	private void CreateHexBoardTileLine(){
 		for (int x = 0; x < Width; x++) {

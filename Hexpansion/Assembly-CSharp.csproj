@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HexBoardTile.cs" />
     <Compile Include="Assets\Scripts\HexBoardTileMap.cs" />
     <Compile Include="Assets\Scripts\HexPlayerTile.cs" />

@@ -105,7 +105,6 @@ public class CameraManager : MonoBehaviour {
 		//Mouse wheel back scroll
 		if (Input.GetAxis("Mouse ScrollWheel") < 0){
 			if (GetComponent<Transform>().position.y < MaxZoomOut){
-				Debug.Log(GetComponent<Transform>().position.z + " " + MaxZoomOut);
 				GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y + 2 * ZoomSpeed, transform.position.z ); // z - ZoomSpeed
 				//transform.Rotate(2,0,0);
 			}
