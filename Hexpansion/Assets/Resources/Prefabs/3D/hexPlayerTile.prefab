@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 33037437332878868}
   - component: {fileID: 64494949525094298}
   - component: {fileID: 114265605898575668}
+  - component: {fileID: 114358581128268472}
   - component: {fileID: 23626871388890798}
   m_Layer: 0
   m_Name: hexPlayerTile
@@ -636,7 +637,7 @@ Animator:
   m_GameObject: {fileID: 1303580141219666}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02196f65cf7c0f44c83c3d558dc2328e, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -653,7 +654,7 @@ Animator:
   m_GameObject: {fileID: 1035753814066934}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02196f65cf7c0f44c83c3d558dc2328e, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -670,7 +671,7 @@ Animator:
   m_GameObject: {fileID: 1325675260379702}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02196f65cf7c0f44c83c3d558dc2328e, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -687,7 +688,7 @@ Animator:
   m_GameObject: {fileID: 1532711177963294}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02196f65cf7c0f44c83c3d558dc2328e, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -704,7 +705,7 @@ Animator:
   m_GameObject: {fileID: 1428821041439322}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02196f65cf7c0f44c83c3d558dc2328e, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -721,7 +722,7 @@ Animator:
   m_GameObject: {fileID: 1369925130097796}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 02196f65cf7c0f44c83c3d558dc2328e, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -830,8 +831,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa14cea986fcea1458d150290436f150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartPosition: {x: 0, y: 0, z: 0}
-  HighlightShader: {fileID: 4800000, guid: ad68893c61460d448a4141e81c5132ff, type: 3}
   ColorIdList: 
   XCood: 0
   ZCood: 0
+--- !u!114 &114358581128268472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757016046333358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4f9d35b29546a458f63b683c1e9956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPosition: {x: 0, y: 0, z: 0}
+  HighlightShader: {fileID: 4800000, guid: ad68893c61460d448a4141e81c5132ff, type: 3}
+  HexPlayerTile: {fileID: 114265605898575668}

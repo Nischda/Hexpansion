@@ -47,7 +47,7 @@ public class HexPlayerTileMap : MonoBehaviour {
 		hexTileGameObject.transform.localPosition = new Vector3((x-0.05f)- _centerX , -4, z - 1.65f); // set coods after parenting to avoid relative misplacement
 		hexTileGameObject.name = "HexPlayerTile_" + xCood + "_" + zCood;
 		hexTileGameObject.isStatic = true;
-		var hexTile = hexTileGameObject.GetComponent<HexPlayerTile>();
+		HexPlayerTile hexTile = hexTileGameObject.GetComponent<HexPlayerTile>();
 		hexTile.XCood = xCood;
 		hexTile.ZCood = zCood;
 		ColorizeParts(hexTileGameObject);
@@ -56,8 +56,7 @@ public class HexPlayerTileMap : MonoBehaviour {
 		//hexTileGameObject. transform.localScale += new Vector3(0, Random.value*10, 0);
 	}
 
-	private void ColorizeParts(GameObject hexTileGameObject)
-	{
+	private void ColorizeParts(GameObject hexTileGameObject) {
 		var tilePartsGameObject = hexTileGameObject.transform.Find("tile_parts");
 		List<int> colorIdList = new List<int>();
 		
@@ -70,7 +69,6 @@ public class HexPlayerTileMap : MonoBehaviour {
 	}
 
 	public void AddTile(int x, int z) {
-		Debug.Log("Added Tile");
 		float xPos = x * XOffset;
 		float zPos = z * ZOffset;
 		if (z % 2 == 1) {
@@ -79,25 +77,23 @@ public class HexPlayerTileMap : MonoBehaviour {
 		CreateTile(xPos, zPos, x, z);
 	}
 
-	public void UpdatePlayerTiles(string tileName)
-	{
+	public void UpdatePlayerTiles(string tileName) {
 		if (tileName == "HexPlayerTile_0_0"){
 			Destroy(GameObject.Find("HexPlayerTileMap/HexPlayerTile_1_0"));
 		}
 		else{
 			Destroy(GameObject.Find("HexPlayerTileMap/HexPlayerTile_0_0"));
 		}
-		GameObject playerTile3 = GameObject.Find("HexPlayerTileMap/HexPlayerTile_2_0");
-		GameObject playerTile4 = GameObject.Find("HexPlayerTileMap/HexPlayerTile_3_0");
-		
-		playerTile3.transform.position -= new Vector3(2*XOffset,0,0);
-		playerTile3.name = "HexPlayerTile_0_0";
-		playerTile3.GetComponent<HexPlayerTile>().StartPosition = playerTile3.transform.position;
-		playerTile4.transform.position -= new Vector3(2*XOffset,0,0);
-		playerTile4.name = "HexPlayerTile_1_0";
-		playerTile4.GetComponent<HexPlayerTile>().StartPosition = playerTile4.transform.position;
-		AddTile(2,0);
-		AddTile(3,0);
+		UpdatePlayerTile(2);
+		UpdatePlayerTile(3);
+	}
+
+	private void UpdatePlayerTile(int x){
+		GameObject playerTile = GameObject.Find("HexPlayerTileMap/HexPlayerTile_" + x + "_0");
+		playerTile.transform.position -= new Vector3(2*XOffset,0,0);
+		playerTile.name = "HexPlayerTile_" + (x-2) + "_0";
+		playerTile.GetComponent<DragAndDrop>().StartPosition = playerTile.transform.position;
+		AddTile(x,0);
 	}
 }
 

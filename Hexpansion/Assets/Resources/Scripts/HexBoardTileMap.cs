@@ -23,8 +23,9 @@ public class HexBoardTileMap : MonoBehaviour
 	private float _centerX;
 	private int _centerY;
 
-	private void Start ()
-	{
+	
+	
+	private void Start () {
 		//center hexBoardTileMap to world root 
 		_centerX = Width/ 2 + Width/2*0.5f -1;
 		_centerY =  Convert.ToInt32(Height * ZOffset / 2);
@@ -39,10 +40,7 @@ public class HexBoardTileMap : MonoBehaviour
 		}
 
 	}
-	
-	void Update () {
-		
-	}
+
 
 	private void CreateHexMapRectangle() {
 		for (int x = 0; x < Width; x++) {

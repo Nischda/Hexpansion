@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using UnityEditor;
 using UnityEngine;
 
 public class HexBoardTile : MonoBehaviour
@@ -9,15 +10,18 @@ public class HexBoardTile : MonoBehaviour
 
 	public int X;
 	public int Y;
-	public List<GameObject> HexNeighborList;
+	public List<HexBoardTile> HexNeighborList;
+	public bool Available = true;
 	
 	private Renderer _rend;
 	private Color _baseColor;
+	public bool IsHighlighted = false;
+	
 	public Color HoverColor;
 	public Shader HighlightShader;
 	
 	private void Start () {
-		HexNeighborList = new List<GameObject>();
+		HexNeighborList = new List<HexBoardTile>();
 		SetNeighbours();
 
 		_rend = GetComponent<Renderer>();
@@ -46,7 +50,7 @@ public class HexBoardTile : MonoBehaviour
 	private void AddNeighbour(int x, int y){
 		var neighbour = GameObject.Find("HexBoardTile_" + x + "_" + y);
 		if (neighbour != null){
-			HexNeighborList.Add(neighbour);
+			HexNeighborList.Add(neighbour.GetComponentInChildren<HexBoardTile>());
 		}
 		else{
 			HexNeighborList.Add(null);
@@ -54,10 +58,23 @@ public class HexBoardTile : MonoBehaviour
 	}
 	
 	private void OnMouseOver(){
-		_rend.material.color = HoverColor;
+		if (!IsHighlighted) {
+			HighlightColor();
+		}
 	}
 
 	private void OnMouseExit(){
+		if (!IsHighlighted){
+			ResetColor();
+		}
+	}
+
+	public void HighlightColor(){
+		_rend.material.color = HoverColor;
+	}
+	
+	public void ResetColor(){
 		_rend.material.color = _baseColor;
 	}
+	
 }

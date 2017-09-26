@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Assets\Resources\_MK\MKGlowFree\MKGlowFree.cs" />
     <Compile Include="Assets\Resources\Scripts\CameraManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\DragAndDrop.cs" />
     <Compile Include="Assets\Resources\Scripts\FloatingTextManager.cs" />
     <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
     <Compile Include="Assets\Resources\Scripts\HexBoardTile.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Assets\Resources\Scripts\HexPlayerTileMap.cs" />
     <Compile Include="Assets\Resources\Scripts\Initialize.cs" />
     <Compile Include="Assets\Resources\Scripts\MouseManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\PlacedTilesManager.cs" />
     <Compile Include="Assets\Resources\Scripts\ScorePopUp.cs" />
     <Compile Include="Assets\Resources\Scripts\Unit.cs" />
     <Compile Include="Assets\Resources\Scripts\Utility.cs" />

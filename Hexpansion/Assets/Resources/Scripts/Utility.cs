@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 
-public static  class Utility {
+public static class Utility {
 	public static Color GreenColor = new Color32(0, 243, 0, 255);
 	public static Color RedColor = new Color32(238, 58, 57, 255);
 	public static Color BlueColor = new Color32(0,165,255, 255);

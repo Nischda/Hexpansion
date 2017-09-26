@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ScorePopUp : MonoBehaviour {
     public Animator Animator;
+    
     private Text _scoreText;
     private Outline _outline;
 

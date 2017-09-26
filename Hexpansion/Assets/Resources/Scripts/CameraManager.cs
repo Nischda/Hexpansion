@@ -14,51 +14,7 @@ public class CameraManager : MonoBehaviour {
 	private Vector3 _mouseOrigin;	//Cursor location on drag init
 	private bool _isRotating;	
 	private bool _isPanning;	
-	private bool _isZooming;	
-	
-	/*
-	private void Start () {
-		// set the desired aspect ratio (the values in this example are
-		// hard-coded for 16:9, but you could make them into public
-		// variables instead so you can set them at design time)
-		float targetaspect = 16.0f / 9.0f;
-
-		// determine the game window's current aspect ratio
-		float windowaspect = (float)Screen.width / (float)Screen.height;
-
-		// current viewport height should be scaled by this amount
-		float scaleheight = windowaspect / targetaspect;
-
-		// obtain camera component so we can modify its viewport
-		Camera camera = GetComponent<Camera>();
-
-		// if scaled height is less than current height, add letterbox
-		if (scaleheight < 1.0f)
-		{  
-			Rect rect = camera.rect;
-
-			rect.width = 1.0f;
-			rect.height = scaleheight;
-			rect.x = 0;
-			rect.y = (1.0f - scaleheight) / 2.0f;
-        
-			camera.rect = rect;
-		}
-		else // add pillarbox
-		{
-			float scalewidth = 1.0f / scaleheight;
-
-			Rect rect = camera.rect;
-
-			rect.width = scalewidth;
-			rect.height = 1.0f;
-			rect.x = (1.0f - scalewidth) / 2.0f;
-			rect.y = 0;
-
-			camera.rect = rect;
-		}
-	}
-	*/
+	//private bool _isZooming;	
 
 	private void RotateCamera() {
 		//left mouse button
@@ -109,16 +65,9 @@ public class CameraManager : MonoBehaviour {
 				//transform.Rotate(2,0,0);
 			}
 		}
+
+		
 		/*
-		// scroll mouse button
-		if (Input.GetMouseButtonDown(2)){
-			_mouseOrigin = Input.mousePosition;
-			_isZooming = true;
-			Debug.Log("works");
-		}
-		
-		if (!Input.GetMouseButton(2)) _isZooming = false;
-		
 		// Move camera on Z axis
 		if (_isZooming){
 			Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - _mouseOrigin);
