@@ -19,6 +19,7 @@
               <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
               <folding>
                 <marker date="1506423871343" expanded="false" signature="6:100" ph="..." />
+                <marker date="1506423871343" expanded="true" signature="142:686" ph="{...}" />
                 <marker date="1506423871343" expanded="true" signature="267:511" ph="{...}" />
                 <marker date="1506423871343" expanded="true" signature="562:684" ph="{...}" />
               </folding>
@@ -29,8 +30,8 @@
       <file leaf-file-name="HexPlayerTile.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/HexPlayerTile.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding>
                 <marker date="1506443879354" expanded="false" signature="6:302" ph="..." />
                 <marker date="1506443879354" expanded="true" signature="304:459" ph="/* Todo: preview valid tiles to place ... */" />
@@ -53,61 +54,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DragAndDrop.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DragAndDrop.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/DragAndDrop.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="33" column="80" lean-forward="false" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
+            <state relative-caret-position="255">
+              <caret line="83" column="85" lean-forward="false" selection-start-line="83" selection-start-column="85" selection-end-line="83" selection-end-column="85" />
               <folding>
-                <marker date="1506443899221" expanded="false" signature="6:78" ph="..." />
-                <marker date="1506443899221" expanded="true" signature="121:3539" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="438:589" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="629:1014" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1044:1347" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1075:1093" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1282:1321" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1321:1344" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1376:1471" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1450:1468" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1500:1568" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1520:1565" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1595:2307" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="1752:2127" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="2127:2212" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="2338:2573" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="2597:2672" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="2695:2975" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="3033:3133" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="3191:3367" ph="{...}" />
-                <marker date="1506443899221" expanded="true" signature="3399:3537" ph="{...}" />
+                <marker date="1506595184228" expanded="false" signature="6:78" ph="..." />
+                <marker date="1506595184228" expanded="true" signature="121:3812" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="438:589" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="629:1014" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1044:1355" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1075:1093" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1290:1329" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1329:1352" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1384:1479" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1458:1476" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1508:1576" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1528:1573" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1603:2409" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="1823:2229" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="2229:2314" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="2440:2675" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="2699:2774" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="2797:3077" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="3137:3247" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="3165:3186" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="3304:3404" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="3464:3640" ph="{...}" />
+                <marker date="1506595184228" expanded="true" signature="3672:3810" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlacedTilesManager.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlacedTilesManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/PlacedTilesManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="48" column="129" lean-forward="false" selection-start-line="48" selection-start-column="129" selection-end-line="48" selection-end-column="129" />
+            <state relative-caret-position="748">
+              <caret line="59" column="65" lean-forward="false" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
               <folding>
-                <marker date="1506444753154" expanded="false" signature="6:78" ph="..." />
-                <marker date="1506444753154" expanded="true" signature="119:1867" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="258:403" ph="/// Add boardTiles to a list, which have been occupied by a hexPlayerTile ... " />
-                <marker date="1506444753154" expanded="true" signature="464:531" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="534:680" ph="/// This list always keeps of track of all unoccupied hexBoardTiles, which are neighbored to occupied hexBoardTil ... " />
-                <marker date="1506444753154" expanded="true" signature="727:1076" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="831:1073" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="903:1069" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="1014:1064" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="1079:1231" ph="/// Iterates over all neighbored, unoccupied hexBoardTiles and highlights them, while disabling any change to thi ... " />
-                <marker date="1506444753154" expanded="true" signature="1281:1468" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="1317:1465" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="1380:1461" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="1472:1628" ph="/// Iterates over all neighbored, unoccupied hexBoardTiles and disables their highlights them, as well as unlocks ... " />
-                <marker date="1506444753154" expanded="true" signature="1680:1863" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="1716:1860" ph="{...}" />
-                <marker date="1506444753154" expanded="true" signature="1779:1856" ph="{...}" />
+                <marker date="1506595185823" expanded="false" signature="6:78" ph="..." />
+                <marker date="1506595185823" expanded="true" signature="119:2013" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="285:430" ph="/// Add boardTiles to a list, which have been occupied by a hexPlayerTile ... " />
+                <marker date="1506595185823" expanded="true" signature="491:558" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="561:707" ph="/// This list always keeps of track of all unoccupied hexBoardTiles, which are neighbored to occupied hexBoardTil ... " />
+                <marker date="1506595185823" expanded="true" signature="754:1103" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="858:1100" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="930:1096" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="1041:1091" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="1106:1258" ph="/// Iterates over all neighbored, unoccupied hexBoardTiles and highlights them, while disabling any change to thi ... " />
+                <marker date="1506595185823" expanded="true" signature="1308:1495" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="1344:1492" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="1407:1488" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="1499:1655" ph="/// Iterates over all neighbored, unoccupied hexBoardTiles and disables their highlights them, as well as unlocks ... " />
+                <marker date="1506595185823" expanded="true" signature="1707:1890" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="1743:1887" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="1806:1883" ph="{...}" />
+                <marker date="1506595185823" expanded="true" signature="1953:2009" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -116,17 +120,17 @@
       <file leaf-file-name="Utility.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utility.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="136">
+              <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
               <folding>
-                <marker date="1506424998839" expanded="false" signature="6:113" ph="..." />
-                <marker date="1506424998839" expanded="true" signature="143:1406" ph="{...}" />
-                <marker date="1506424998839" expanded="true" signature="534:871" ph="/* public static Color RedColor = new Color32(255, 137, 181, 255); ... */" />
-                <marker date="1506424998839" expanded="true" signature="928:1015" ph="{...}" />
-                <marker date="1506424998839" expanded="true" signature="1071:1275" ph="{...}" />
-                <marker date="1506424998839" expanded="true" signature="1199:1257" ph="{...}" />
-                <marker date="1506424998839" expanded="true" signature="1339:1400" ph="{...}" />
-                <marker date="1506424998839" expanded="true" signature="1408:1621" ph="/* Vector3 dir = destination - transform.position; ... */" />
+                <marker date="1506595185813" expanded="false" signature="6:113" ph="..." />
+                <marker date="1506595185813" expanded="true" signature="143:1449" ph="{...}" />
+                <marker date="1506595185813" expanded="true" signature="577:914" ph="/* public static Color RedColor = new Color32(255, 137, 181, 255); ... */" />
+                <marker date="1506595185813" expanded="true" signature="971:1058" ph="{...}" />
+                <marker date="1506595185813" expanded="true" signature="1114:1318" ph="{...}" />
+                <marker date="1506595185813" expanded="true" signature="1242:1300" ph="{...}" />
+                <marker date="1506595185813" expanded="true" signature="1382:1443" ph="{...}" />
+                <marker date="1506595185813" expanded="true" signature="1451:1664" ph="/* Vector3 dir = destination - transform.position; ... */" />
               </folding>
             </state>
           </provider>
@@ -135,7 +139,7 @@
       <file leaf-file-name="HexPlayerTileMap.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/HexPlayerTileMap.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
+            <state relative-caret-position="1105">
               <caret line="70" column="32" lean-forward="false" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
               <folding>
                 <marker date="1506426682016" expanded="false" signature="6:179" ph="..." />
@@ -199,7 +203,7 @@
       <file leaf-file-name="HexBoardTile.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/HexBoardTile.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="878">
+            <state relative-caret-position="935">
               <caret line="60" column="4" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="60" selection-end-column="4" />
               <folding>
                 <marker date="1506444430017" expanded="false" signature="6:164" ph="..." />
@@ -229,10 +233,11 @@
       <find>camera</find>
       <find>color</find>
       <find>Gameob</find>
-      <find>debug</find>
       <find>Game</find>
       <find>neighb</find>
       <find>displ</find>
+      <find>Debug</find>
+      <find>debug</find>
     </findStrings>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -277,13 +282,13 @@
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/CameraManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/FloatingTextManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ScorePopUp.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Utility.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/HexPlayerTileMap.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/HexPlayerTile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/DragAndDrop.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/HexBoardTile.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/HexBoardTileMap.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/PlacedTilesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Utility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/DragAndDrop.cs" />
       </list>
     </option>
   </component>
@@ -453,11 +458,12 @@
       <workItem from="1506249107542" duration="2663000" />
       <workItem from="1506414524490" duration="6513000" />
       <workItem from="1506442776329" duration="2132000" />
+      <workItem from="1506593989103" duration="1248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134699000" />
+    <option name="totallyTimeSpent" value="135947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -480,7 +486,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13404255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -493,28 +499,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12695493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -602,65 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ScorePopUp.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <marker date="1506423871343" expanded="false" signature="6:100" ph="..." />
-            <marker date="1506423871343" expanded="true" signature="267:511" ph="{...}" />
-            <marker date="1506423871343" expanded="true" signature="562:684" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utility.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <marker date="1506424998839" expanded="false" signature="6:113" ph="..." />
-            <marker date="1506424998839" expanded="true" signature="143:1406" ph="{...}" />
-            <marker date="1506424998839" expanded="true" signature="534:871" ph="/* public static Color RedColor = new Color32(255, 137, 181, 255); ... */" />
-            <marker date="1506424998839" expanded="true" signature="928:1015" ph="{...}" />
-            <marker date="1506424998839" expanded="true" signature="1071:1275" ph="{...}" />
-            <marker date="1506424998839" expanded="true" signature="1199:1257" ph="{...}" />
-            <marker date="1506424998839" expanded="true" signature="1339:1400" ph="{...}" />
-            <marker date="1506424998839" expanded="true" signature="1408:1621" ph="/* Vector3 dir = destination - transform.position; ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/DragAndDrop.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="33" column="80" lean-forward="false" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
-          <folding>
-            <marker date="1506443899221" expanded="false" signature="6:78" ph="..." />
-            <marker date="1506443899221" expanded="true" signature="121:3539" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="438:589" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="629:1014" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1044:1347" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1075:1093" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1282:1321" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1321:1344" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1376:1471" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1450:1468" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1500:1568" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1520:1565" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1595:2307" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="1752:2127" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="2127:2212" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="2338:2573" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="2597:2672" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="2695:2975" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="3033:3133" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="3191:3367" ph="{...}" />
-            <marker date="1506443899221" expanded="true" signature="3399:3537" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/HexBoardTileMap.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -697,7 +622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/HexBoardTile.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="878">
+        <state relative-caret-position="935">
           <caret line="60" column="4" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="60" selection-end-column="4" />
           <folding>
             <marker date="1506444430017" expanded="false" signature="6:164" ph="..." />
@@ -719,34 +644,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/HexPlayerTile.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <marker date="1506443879354" expanded="false" signature="6:302" ph="..." />
-            <marker date="1506443879354" expanded="true" signature="304:459" ph="/* Todo: preview valid tiles to place ... */" />
-            <marker date="1506443879354" expanded="true" signature="546:3193" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="658:874" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="800:871" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="942:1703" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="1126:1700" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="1156:1684" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="1352:1679" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="1549:1673" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="1708:2060" ph="/// Returns the colorId of the tile which is on the opposite end of the index given. ... " />
-            <marker date="1506443879354" expanded="true" signature="2105:2244" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="2247:2587" ph="/// Gets the current rotation and divides it by 60 to get the amount of rotations present ... " />
-            <marker date="1506443879354" expanded="true" signature="2618:2683" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="2720:3008" ph="{...}" />
-            <marker date="1506443879354" expanded="true" signature="3057:3191" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/HexPlayerTileMap.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
+        <state relative-caret-position="1105">
           <caret line="70" column="32" lean-forward="false" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
           <folding>
             <marker date="1506426682016" expanded="false" signature="6:179" ph="..." />
@@ -770,28 +670,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ScorePopUp.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <marker date="1506423871343" expanded="false" signature="6:100" ph="..." />
+            <marker date="1506423871343" expanded="true" signature="142:686" ph="{...}" />
+            <marker date="1506423871343" expanded="true" signature="267:511" ph="{...}" />
+            <marker date="1506423871343" expanded="true" signature="562:684" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/HexPlayerTile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <marker date="1506443879354" expanded="false" signature="6:302" ph="..." />
+            <marker date="1506443879354" expanded="true" signature="304:459" ph="/* Todo: preview valid tiles to place ... */" />
+            <marker date="1506443879354" expanded="true" signature="546:3193" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="658:874" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="800:871" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="942:1703" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="1126:1700" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="1156:1684" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="1352:1679" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="1549:1673" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="1708:2060" ph="/// Returns the colorId of the tile which is on the opposite end of the index given. ... " />
+            <marker date="1506443879354" expanded="true" signature="2105:2244" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="2247:2587" ph="/// Gets the current rotation and divides it by 60 to get the amount of rotations present ... " />
+            <marker date="1506443879354" expanded="true" signature="2618:2683" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="2720:3008" ph="{...}" />
+            <marker date="1506443879354" expanded="true" signature="3057:3191" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utility.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding>
+            <marker date="1506595185813" expanded="false" signature="6:113" ph="..." />
+            <marker date="1506595185813" expanded="true" signature="143:1449" ph="{...}" />
+            <marker date="1506595185813" expanded="true" signature="577:914" ph="/* public static Color RedColor = new Color32(255, 137, 181, 255); ... */" />
+            <marker date="1506595185813" expanded="true" signature="971:1058" ph="{...}" />
+            <marker date="1506595185813" expanded="true" signature="1114:1318" ph="{...}" />
+            <marker date="1506595185813" expanded="true" signature="1242:1300" ph="{...}" />
+            <marker date="1506595185813" expanded="true" signature="1382:1443" ph="{...}" />
+            <marker date="1506595185813" expanded="true" signature="1451:1664" ph="/* Vector3 dir = destination - transform.position; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/PlacedTilesManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="48" column="129" lean-forward="false" selection-start-line="48" selection-start-column="129" selection-end-line="48" selection-end-column="129" />
+        <state relative-caret-position="748">
+          <caret line="59" column="65" lean-forward="false" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
           <folding>
-            <marker date="1506444753154" expanded="false" signature="6:78" ph="..." />
-            <marker date="1506444753154" expanded="true" signature="119:1867" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="258:403" ph="/// Add boardTiles to a list, which have been occupied by a hexPlayerTile ... " />
-            <marker date="1506444753154" expanded="true" signature="464:531" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="534:680" ph="/// This list always keeps of track of all unoccupied hexBoardTiles, which are neighbored to occupied hexBoardTil ... " />
-            <marker date="1506444753154" expanded="true" signature="727:1076" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="831:1073" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="903:1069" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="1014:1064" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="1079:1231" ph="/// Iterates over all neighbored, unoccupied hexBoardTiles and highlights them, while disabling any change to thi ... " />
-            <marker date="1506444753154" expanded="true" signature="1281:1468" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="1317:1465" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="1380:1461" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="1472:1628" ph="/// Iterates over all neighbored, unoccupied hexBoardTiles and disables their highlights them, as well as unlocks ... " />
-            <marker date="1506444753154" expanded="true" signature="1680:1863" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="1716:1860" ph="{...}" />
-            <marker date="1506444753154" expanded="true" signature="1779:1856" ph="{...}" />
+            <marker date="1506595185823" expanded="false" signature="6:78" ph="..." />
+            <marker date="1506595185823" expanded="true" signature="119:2013" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="285:430" ph="/// Add boardTiles to a list, which have been occupied by a hexPlayerTile ... " />
+            <marker date="1506595185823" expanded="true" signature="491:558" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="561:707" ph="/// This list always keeps of track of all unoccupied hexBoardTiles, which are neighbored to occupied hexBoardTil ... " />
+            <marker date="1506595185823" expanded="true" signature="754:1103" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="858:1100" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="930:1096" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="1041:1091" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="1106:1258" ph="/// Iterates over all neighbored, unoccupied hexBoardTiles and highlights them, while disabling any change to thi ... " />
+            <marker date="1506595185823" expanded="true" signature="1308:1495" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="1344:1492" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="1407:1488" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="1499:1655" ph="/// Iterates over all neighbored, unoccupied hexBoardTiles and disables their highlights them, as well as unlocks ... " />
+            <marker date="1506595185823" expanded="true" signature="1707:1890" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="1743:1887" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="1806:1883" ph="{...}" />
+            <marker date="1506595185823" expanded="true" signature="1953:2009" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/DragAndDrop.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="83" column="85" lean-forward="false" selection-start-line="83" selection-start-column="85" selection-end-line="83" selection-end-column="85" />
+          <folding>
+            <marker date="1506595184228" expanded="false" signature="6:78" ph="..." />
+            <marker date="1506595184228" expanded="true" signature="121:3812" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="438:589" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="629:1014" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1044:1355" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1075:1093" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1290:1329" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1329:1352" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1384:1479" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1458:1476" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1508:1576" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1528:1573" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1603:2409" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="1823:2229" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="2229:2314" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="2440:2675" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="2699:2774" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="2797:3077" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="3137:3247" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="3165:3186" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="3304:3404" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="3464:3640" ph="{...}" />
+            <marker date="1506595184228" expanded="true" signature="3672:3810" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -41,7 +41,7 @@ public class DragAndDrop : MonoBehaviour {
 			Rotate();
 		}
 		GameObject ourHitObject = Utility.GetHitObjectFromRayCast();
-		if (ourHitObject != null && ourHitObject.CompareTag("HexBoardTile") && ourHitObject.GetComponent<HexBoardTile>().Available){
+		if (ourHitObject != null && ourHitObject.CompareTag("HexBoardTile") && IsValidBoardTile(ourHitObject.GetComponent<HexBoardTile>())){
 			SnapToBoardTile(ourHitObject);
 		}
 		else{
@@ -65,11 +65,12 @@ public class DragAndDrop : MonoBehaviour {
 	private void OnMouseUp(){
 		_mouseDown = false;
 		GameObject ourHitObject = Utility.GetHitObjectFromRayCast();
-		if (ourHitObject != null && ourHitObject.CompareTag("HexBoardTile")){
+		if (ourHitObject != null && ourHitObject.CompareTag("HexBoardTile") && IsValidBoardTile(ourHitObject.GetComponent<HexBoardTile>())){
 			transform.parent.GetComponent<HexPlayerTileMap>().UpdatePlayerTiles(name); // Add new PlayerTile as one has been placed
 			PlaceOnBoardTile(ourHitObject); //Tile gets placed on board
 			HexPlayerTile.CalculatePoints(ourHitObject.GetComponent<HexBoardTile>()); //update score points based on matching corners
 			//HexPlayerTile.DisableInteraction();
+			Utility.FirstRound = false;
 			Destroy(this);
 		}
 		else{
@@ -95,11 +96,18 @@ public class DragAndDrop : MonoBehaviour {
 		transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 	}
 
+	private bool IsValidBoardTile(HexBoardTile hexBoardTile) {
+		if (Utility.FirstRound) {
+			return true;
+		}
+		return PlacedTilesManager.IsFreeNeighbor(hexBoardTile);
+	}
 	
 	private void SnapToBoardTile(GameObject ourHitObject){
 		Utility.Move(gameObject, ourHitObject);
 		transform.localScale = new Vector3(0.9f,0.9f,0.9f);
 	}
+	
 	
 	private void PlaceOnBoardTile(GameObject ourHitObject){
 		Utility.Move(gameObject, ourHitObject);

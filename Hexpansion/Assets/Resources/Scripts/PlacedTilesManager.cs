@@ -5,7 +5,7 @@ using UnityEngine;
 public static class PlacedTilesManager {
 
 	private static List<HexBoardTile> _tilesPlaced  = new List<HexBoardTile>();
-	private static List<HexBoardTile> _freeNeighborTiles;
+	private static List<HexBoardTile> _freeNeighborTiles = new List<HexBoardTile>();
 	
 
 	/// <summary>
@@ -55,6 +55,10 @@ public static class PlacedTilesManager {
 				hexBoardTile.IsHighlighted = false;
 			}
 		}
+	}
+
+	public static bool IsFreeNeighbor(HexBoardTile hexBoardTile){
+		return _freeNeighborTiles.Contains(hexBoardTile);
 	}
 	
 }
