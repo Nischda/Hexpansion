@@ -10,8 +10,9 @@ using UnityEditorInternal.VR;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-//Todo: preview valid tiles to place
-//Todo: Add Outline to playerTileParts or add contrast (edges especially)
+
+//Todo: improve contrast
+//ToDo: CustomCursor
 //Todo: move mouseover etc into mousemanager
 [RequireComponent(typeof(MeshCollider))]
  
@@ -36,7 +37,7 @@ public class HexPlayerTile : MonoBehaviour
 	//SCORE
 	public void CalculatePoints(HexBoardTile hexBoardTile){
 		
-		PlacedTilesManager.AddPlacedTile(hexBoardTile); //ToDo Move
+		PlacedTilesManager.AddPlacedTile(hexBoardTile);
 		hexBoardTile.Available = false;
 		int index = 12;
 		foreach (HexBoardTile neighbor in hexBoardTile.HexNeighborList){

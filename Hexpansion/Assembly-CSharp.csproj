@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Resources\_MK\MKGlowFree\MKGlowFree.cs" />
+    <Compile Include="Assets\Resources\Menu\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Resources\Scripts\CameraManager.cs" />
     <Compile Include="Assets\Resources\Scripts\DragAndDrop.cs" />
     <Compile Include="Assets\Resources\Scripts\FloatingTextManager.cs" />

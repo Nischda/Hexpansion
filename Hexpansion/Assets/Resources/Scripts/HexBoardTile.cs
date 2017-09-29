@@ -12,12 +12,15 @@ public class HexBoardTile : MonoBehaviour
 	public int Y;
 	public List<HexBoardTile> HexNeighborList;
 	public bool Available = true;
+	public bool IsValid = false;
 	
 	private Renderer _rend;
 	private Color _baseColor;
 	public bool IsHighlighted = false;
 	
-	public Color HoverColor;
+	public Color ValidColor;
+	public Color InvalidColor;
+	
 	public Shader HighlightShader;
 	
 	private void Start () {
@@ -58,9 +61,13 @@ public class HexBoardTile : MonoBehaviour
 	}
 	
 	private void OnMouseOver(){
-		if (!IsHighlighted) {
-			HighlightColor();
+		if (IsValid){
+			DisplayValidColor();
 		}
+		else{
+			DisplayInvalidColor();
+		}
+
 	}
 
 	private void OnMouseExit(){
@@ -69,8 +76,12 @@ public class HexBoardTile : MonoBehaviour
 		}
 	}
 
-	public void HighlightColor(){
-		_rend.material.color = HoverColor;
+	public void DisplayValidColor(){
+		_rend.material.color = ValidColor;
+	}
+	
+	public void DisplayInvalidColor(){
+		_rend.material.color = InvalidColor;
 	}
 	
 	public void ResetColor(){

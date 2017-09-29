@@ -209,5 +209,9 @@ MonoBehaviour:
   X: 0
   Y: 0
   HexNeighborList: []
-  HoverColor: {r: 0.36862746, g: 0.59607846, b: 0.36078432, a: 1}
+  Available: 1
+  IsValid: 0
+  IsHighlighted: 0
+  ValidColor: {r: 0.48209047, g: 0.6691177, b: 0.40835857, a: 1}
+  InvalidColor: {r: 0.6691177, g: 0.40835857, b: 0.40835857, a: 1}
   HighlightShader: {fileID: 0}

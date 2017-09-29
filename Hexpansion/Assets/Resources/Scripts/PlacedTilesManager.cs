@@ -27,6 +27,7 @@ public static class PlacedTilesManager {
 				//Debug.Log(hexBoardTile.HexNeighborList.Count);
 				if (neighborTile != null && neighborTile.Available) {
 					_freeNeighborTiles.Add(neighborTile);
+					neighborTile.IsValid = true;
 				}
 			}
 		}
@@ -38,7 +39,7 @@ public static class PlacedTilesManager {
 	public static void HighlightFreeNeighborTiles() {
 		if (_freeNeighborTiles != null) {
 			foreach (HexBoardTile hexBoardTile in _freeNeighborTiles) {
-				hexBoardTile.HighlightColor();
+				hexBoardTile.DisplayValidColor();
 				hexBoardTile.IsHighlighted = true;
 
 			}
