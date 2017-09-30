@@ -2,7 +2,17 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+
+//ToDo: Settings: Game: Sound On/Off Sound Volume Slider
+//ToDo: Settings: Game: Music On/Off Music Volume Slider
+//ToDo: Settings: Controls: Button: Click/Drag, Button: Rotate
+//ToDo: Settings: Video: Bloom, Resolution?
+//ToDo:
+//ToDo:
+//ToDo:
+//ToDo:
 
 public class MainMenu : MonoBehaviour
 {
@@ -19,6 +29,9 @@ public class MainMenu : MonoBehaviour
 	public GameObject BtnLoadGame;
 	public GameObject BtnBack;
 	public GameObject BtnAreYouSure;
+	
+	//Highlight
+	public GameObject BtnHover;
 
 	//Menus
 	public void EnableMainMenu() {
@@ -81,15 +94,15 @@ public class MainMenu : MonoBehaviour
 
 	//PlayMenu
 	public void NewGame(){
-		Application.LoadLevel("game");
+		SceneManager.LoadScene("game");
 	}
 	
 	public void Continue(){
-		Application.LoadLevel("game");
+		SceneManager.LoadScene("game");
 	}
 	
 	public void LoadGame(){
-		Application.LoadLevel("game");
+		SceneManager.LoadScene("game");
 	}
 	
 }
