@@ -53,11 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Resources\_MK\MKGlowFree\MKGlowFree.cs" />
+    <Compile Include="Assets\Resources\Menu\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Resources\Menu\Scripts\AutoHide.cs" />
+    <Compile Include="Assets\Resources\Menu\Scripts\DEPRECATED\OnHover.cs" />
     <Compile Include="Assets\Resources\Menu\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Resources\Menu\Scripts\OnHover.cs" />
     <Compile Include="Assets\Resources\Menu\Scripts\RayCastIgnoreTransparent.cs" />
-    <Compile Include="Assets\Resources\Scripts\AnimationExtensions.cs" />
-    <Compile Include="Assets\Resources\Scripts\AutoHide.cs" />
+    <Compile Include="Assets\Resources\Menu\Scripts\SettingsMenu.cs" />
+    <Compile Include="Assets\Resources\Menu\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Resources\Scripts\CameraManager.cs" />
     <Compile Include="Assets\Resources\Scripts\DragAndDrop.cs" />
     <Compile Include="Assets\Resources\Scripts\FloatingTextManager.cs" />
@@ -118,6 +120,7 @@
     <None Include="Assets\Resources\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Sprites\MK_Sprite-Default.shader" />
     <None Include="Assets\Resources\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Particle\MK_Particle AddMultiply.shader" />
     <None Include="Assets\Resources\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
+    <None Include="Assets\Resources\Audio\Music\source.txt" />
     <None Include="Assets\Resources\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
     <None Include="Assets\Resources\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
     <None Include="Assets\Resources\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
@@ -151,6 +154,7 @@
     <None Include="Assets\Resources\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Cutout\MK_Cutout-DiffuseBumpSpec.shader" />
     <None Include="Assets\Resources\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Illumin\MK_Illumin-DiffuseBumpSpec.shader" />
     <None Include="Assets\Resources\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Sprites\MK_Sprite-Diffuse.shader" />
+    <None Include="Assets\Resources\Audio\Sound\Sources.txt" />
     <None Include="Assets\Resources\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Illumin\MK_Illumin-DiffuseBumped.shader" />
     <None Include="Assets\Resources\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
     <None Include="Assets\Resources\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Normal\MK_Normal-Glossy.shader" />
