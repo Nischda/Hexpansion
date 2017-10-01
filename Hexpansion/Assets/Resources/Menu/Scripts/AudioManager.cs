@@ -5,24 +5,22 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
 
-	public SoundManager SoundManager;
-	private AudioSource _musicSource;
+	public AudioSource MusicSource;
+	public AudioSource SoundSource;
 	private AudioSource _soundSource;
 	
 	void Start (){
-		_musicSource = this.GetComponent<AudioSource>();
-		_soundSource = SoundManager.GetComponent<AudioSource>();
 		UpdateMusicVolume();
 		UpdateSoundVolume();
 	}
 
 
 	public void UpdateMusicVolume() {
-		_musicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
+		MusicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
 	}
 	
 	public void UpdateSoundVolume() {
-		_soundSource.volume = PlayerPrefs.GetFloat("SoundVolume");
+		SoundSource.volume = PlayerPrefs.GetFloat("SoundVolume");
 	}
 
 }

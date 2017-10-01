@@ -57,6 +57,7 @@
     <Compile Include="Assets\Resources\Menu\Scripts\AutoHide.cs" />
     <Compile Include="Assets\Resources\Menu\Scripts\DEPRECATED\OnHover.cs" />
     <Compile Include="Assets\Resources\Menu\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Resources\Menu\Scripts\PlayMenu.cs" />
     <Compile Include="Assets\Resources\Menu\Scripts\RayCastIgnoreTransparent.cs" />
     <Compile Include="Assets\Resources\Menu\Scripts\SettingsMenu.cs" />
     <Compile Include="Assets\Resources\Menu\Scripts\SoundManager.cs" />

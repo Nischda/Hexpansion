@@ -18,6 +18,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
+	private string _currentMenu = "MainMenu";
 	//MainMenu
 	public GameObject BtnAreYouSure;
 	public GameObject BtnPlay;
@@ -30,10 +31,13 @@ public class MainMenu : MonoBehaviour
 	public GameObject BtnLoadGame;
 	public GameObject BtnBackFromPlay;
 	
+	//SettingsMenu
 	public GameObject BtnGame;
 	public GameObject BtnControls;
 	public GameObject BtnVideo;
 	public GameObject BtnBackFromSettings;
+	public GameObject MusicSlider;
+	public GameObject SoundSlider;
 	
 
 	private static List<GameObject> _mainMenuButtons = new List<GameObject>();
@@ -55,6 +59,8 @@ public class MainMenu : MonoBehaviour
 		_settingsMenuButtons.Add(BtnControls);
 		_settingsMenuButtons.Add(BtnVideo);
 		_settingsMenuButtons.Add(BtnBackFromSettings);
+		_settingsMenuButtons.Add(MusicSlider);
+		_settingsMenuButtons.Add(SoundSlider);
 		
 	}
 
@@ -76,12 +82,16 @@ public class MainMenu : MonoBehaviour
 		SetListActive(_mainMenuButtons, true);
 		SetAnimatorBool(_mainMenuButtons, "RotateOut", false);
 		SetAnimatorBool(_mainMenuButtons, "RotateIn", true);
-		
-		SetAnimatorBool(_playMenuButtons, "RotateIn", false);
-		SetAnimatorBool(_playMenuButtons, "RotateOut", true);
-		
-		SetAnimatorBool(_settingsMenuButtons, "RotateIn", false);
-		SetAnimatorBool(_settingsMenuButtons, "RotateOut", true);
+
+		if (_currentMenu == "PlayMenu"){
+			SetAnimatorBool(_playMenuButtons, "RotateIn", false);
+			SetAnimatorBool(_playMenuButtons, "RotateOut", true);
+		}
+		if (_currentMenu == "SettingsMenu") {
+			SetAnimatorBool(_settingsMenuButtons, "RotateIn", false);
+			SetAnimatorBool(_settingsMenuButtons, "RotateOut", true);
+		}
+		_currentMenu = "MainMenu";
 	}
 
 	public void DisplayPlayMenu(){
@@ -91,6 +101,7 @@ public class MainMenu : MonoBehaviour
 		
 		SetAnimatorBool(_mainMenuButtons, "RotateIn", false);
 		SetAnimatorBool(_mainMenuButtons, "RotateOut", true);
+		_currentMenu = "PlayMenu";
 	}
 
 	public void DisplaySettingsMenu(){
@@ -100,6 +111,7 @@ public class MainMenu : MonoBehaviour
 		
 		SetAnimatorBool(_mainMenuButtons, "RotateIn", false);
 		SetAnimatorBool(_mainMenuButtons, "RotateOut", true);
+		_currentMenu = "SettingsMenu";
 	}
 	
 	//Approvals
